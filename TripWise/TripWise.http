@@ -1,0 +1,6 @@
+@TripWise_HostAddress = http://localhost:5095
+
+GET {{TripWise_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

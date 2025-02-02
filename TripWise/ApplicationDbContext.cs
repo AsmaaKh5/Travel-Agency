@@ -22,7 +22,6 @@ namespace TripWise
         public DbSet<OfferHotelService> OfferHotelServices { get; set; }
         public DbSet<OfferTransportService> OfferTransportServices { get; set; }
         public DbSet<Contract> Contracts { get; set; }
-        public DbSet<Payment> Payments { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Agent> Agents { get; set; }
         public DbSet<CompanyType> CompanyTypes { get; set; }

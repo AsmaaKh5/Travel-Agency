@@ -40,7 +40,6 @@ namespace TripWise.Models
 
         public Offer Offer { get; set; }
 
-        public ICollection<Payment> Payments { get; set; }
     }
 
 }

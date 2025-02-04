@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("PromoOffer" , Schema = "Offers and contracts")]
     public class PromoOffer
     {
         [Key]
@@ -18,9 +17,14 @@ namespace TripWise.Models
         [Required]
         public DateTime ActiveTo { get; set; }
 
-        public ICollection<PromoOfferHotelService> PromoOfferHotelServices { get; set; }
+        public virtual ICollection<Offer> Offers { get; set; }
 
-        public ICollection<PromoOfferTransportService> PromoOfferTransportServices { get; set; }
+        public virtual ICollection<PromoOfferHotelService> PromoOfferHotelServices { get; set; }
+
+        public virtual ICollection<PromoOfferTransportService> PromoOfferTransportServices { get; set; }
+
+        [NotMapped]
+        public object TransportService { get; internal set; }
     }
 
 }

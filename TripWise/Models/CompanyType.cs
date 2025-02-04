@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("CompanyTypes", Schema = "Hotels and transport companies")]
+
     public class CompanyType
     {
         [Key]
@@ -13,6 +13,6 @@ namespace TripWise.Models
         [Required, StringLength(100)]
         public string TypeName { get; set; }
 
-        public ICollection<TransportCompany> TransportCompanies { get; set; }
+        public virtual ICollection<TransportCompany> TransportCompanies { get; set; }
     }
 }

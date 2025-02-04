@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("Customers", Schema = "Customers and agents")]
+
     public class Customer
     {
         [Key]
@@ -23,10 +23,16 @@ namespace TripWise.Models
 
         public string Details { get; set; }
 
+        [StringLength(255)]
+        public string Phone { get; set; }
+
+        [StringLength(255)]
+        public string Mobile { get; set; }
+
         public DateTime CustomerFrom { get; set; }
 
-        public ICollection<Offer> Offers { get; set; }
+        public virtual ICollection<Offer> Offers { get; set; }
 
-        public ICollection<Contract> Contracts { get; set; }
+        public virtual ICollection<Contract> Contracts { get; set; }
     }
 }

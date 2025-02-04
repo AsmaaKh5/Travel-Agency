@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("TransportCompany" , Schema = "Hotels and transport companies")]
     public class TransportCompany
     {
         [Key]
@@ -20,14 +20,14 @@ namespace TripWise.Models
 
         public bool Active { get; set; }
 
-        public int CityId { get; set; }
+        public  int CityId { get; set; }
 
         public int CompanyTypeId { get; set; }
 
-        public City City { get; set; }
+        public virtual City City { get; set; }
 
-        public CompanyType CompanyType { get; set; }
+        public virtual CompanyType CompanyType { get; set; }
 
-        public ICollection<TransportService> TransportServices { get; set; }
+        public virtual ICollection<TransportService> TransportServices { get; set; }
     }
 }

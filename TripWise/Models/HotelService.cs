@@ -17,8 +17,12 @@ namespace TripWise.Models
 
         public bool Active { get; set; }
 
-        public Hotel Hotel { get; set; }
+        public virtual Hotel Hotel { get; set; }
 
-        public RoomType RoomType { get; set; }
+        public virtual RoomType RoomType { get; set; }
+
+        public virtual ICollection<PromoOfferHotelService> PromoOffers { get; set; }
+
+        public virtual ICollection<OfferHotelService> Offers { get; set; }
     }
 }

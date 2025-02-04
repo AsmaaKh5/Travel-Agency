@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("Countries", Schema = "Countries & cities")]
+    
     public class Country
     {
         [Key]

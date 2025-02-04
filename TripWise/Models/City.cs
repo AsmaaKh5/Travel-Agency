@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripWise.Models
 {
-    [Table("Cities")]
+  
     public class City
     {
         [Key]
@@ -15,10 +15,10 @@ namespace TripWise.Models
         [Required, StringLength(3)]
         public string CountryCode { get; set; }
 
-        public Country Country { get; set; }
+        public virtual Country Country { get; set; }
 
-        public ICollection<Hotel> Hotels { get; set; }
+        public virtual ICollection<Hotel> Hotels { get; set; }
 
-        public ICollection<TransportCompany> TransportCompanies { get; set; }
+        public virtual ICollection<TransportCompany> TransportCompanies { get; set; }
     }
 }

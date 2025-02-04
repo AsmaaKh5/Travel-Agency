@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TripWise.Models
 {
-    [Table("OfferTransportService" , Schema = "Offers and contracts")]
     public class OfferTransportService
     {
         [Key]
@@ -21,8 +20,8 @@ namespace TripWise.Models
 
         public string Description { get; set; }
 
-        public Offer Offer { get; set; }
+        public virtual Offer Offer { get; set; }
 
-        public TransportService TransportService { get; set; }
+        public virtual TransportService TransportService { get; set; }
     }
 }

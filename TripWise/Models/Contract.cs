@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TripWise.Models
 {
-    [Table("Contract" , Schema = "Offers and contracts")]
+
     public class Contract
     {
         [Key]
@@ -34,11 +34,11 @@ namespace TripWise.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal? RefundedAmount { get; set; }
 
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public Agent Agent { get; set; }
+        public virtual Agent Agent { get; set; }
 
-        public Offer Offer { get; set; }
+        public virtual Offer Offer { get; set; }
 
     }
 
